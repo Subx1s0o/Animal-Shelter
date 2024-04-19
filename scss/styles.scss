@@ -51,6 +51,7 @@ body {
     padding: 0 24px;
   }
   a {
+    display: block;
     padding: 0;
     margin: 0;
     color: inherit;
@@ -86,8 +87,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -182,11 +183,25 @@ nav {
 }
 
 @media (min-width: 600px) {
+  body {
+    .container {
+      padding: 0 32px;
+    }
+    header {
+      .container {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+    }
+  }
+
   .logo {
     a {
       display: flex;
       align-items: center;
+
       .logo-text {
+        margin-left: 4px;
         display: flex;
         flex-direction: column;
 
@@ -225,3 +240,114 @@ nav {
 }
 
 //----------------------------------END HEADER------------------------------------//
+
+.hero {
+  margin: auto;
+  text-align: center;
+  max-width: 470px;
+  h1 {
+    margin-bottom: 24px;
+  }
+  button {
+    border-radius: 25px 25px 25px 0;
+    padding: 15px 70px;
+    box-shadow: 0 0 40px 0 rgba(239, 57, 89, 0.4);
+    background: #ef3959;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    text-align: center;
+    color: #fff;
+
+    display: block;
+    margin: auto;
+    margin-top: 24px;
+  }
+}
+
+.hero-p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #404040;
+  margin-bottom: 24px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 450px;
+  }
+}
+
+.hero-text {
+  button {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) {
+  .hero {
+    button {
+      border-radius: 25px 25px 25px 0;
+      padding: 15px 90px;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .hero {
+    max-width: 650px;
+    .hero-text {
+      h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+      }
+      .hero-p {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    display: flex;
+    text-align: start;
+    margin: 0;
+    max-width: 100%;
+    button {
+      display: none;
+    }
+    .hero-text {
+      flex: 1 1 50%;
+      h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+      }
+      .hero-p {
+        font-size: 20px;
+      }
+      button {
+        display: flex;
+        margin: 0;
+        margin-top: 50px;
+      }
+    }
+    .hero-image {
+      flex: 1 1 50%;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    .hero-text {
+      h1 {
+        font-size: 56px;
+      }
+      .hero-p {
+        font-size: 24px;
+      }
+    }
+  }
+}
