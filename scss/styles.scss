@@ -281,6 +281,7 @@ nav {
 }
 
 .hero-text {
+  padding: 40px 0;
   button {
     display: none;
   }
@@ -319,35 +320,29 @@ nav {
     button {
       display: none;
     }
+
+    .hero-image {
+      img {
+        max-width: 100%;
+      }
+    }
     .hero-text {
       flex: 1 1 50%;
       h1 {
         font-size: 48px;
-        margin-bottom: 30px;
-      }
-      .hero-p {
-        font-size: 20px;
-      }
-      button {
-        display: flex;
-        margin: 0;
-        margin-top: 50px;
-      }
-    }
-    .hero-image {
-      flex: 1 1 50%;
-    }
-  }
-}
-@media (min-width: 1024px) {
-  .hero {
-    .hero-text {
-      h1 {
-        font-size: 56px;
+        margin-bottom: 56px;
       }
       .hero-p {
         font-size: 24px;
       }
+      button {
+        display: flex;
+        margin: 0;
+        margin-top: 80px;
+      }
+    }
+    .hero-image {
+      flex: 1 1 50%;
     }
   }
 }
