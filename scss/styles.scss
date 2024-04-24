@@ -491,6 +491,7 @@ body {
   max-width: 327px;
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.21;
   color: #404040;
   margin-bottom: 40px;
 }
@@ -534,14 +535,49 @@ body {
 }
 
 @media (min-width: 768px) {
+  .about-text-content {
+    align-items: unset;
+  }
+
   .about-content {
+    width: 100%;
     flex-direction: row;
+    gap: 28px;
+    justify-content: space-between;
   }
   body {
     .about-container {
+      h2 {
+        display: none;
+        font-size: 40px;
+      }
       .about-text {
         flex-direction: column;
+        max-width: 464px;
+        h2 {
+          display: block;
+          margin-top: 20px;
+          margin-bottom: 40px;
+          text-align: start;
+        }
       }
     }
+  }
+  .about-image {
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 61px 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .about-text {
+    line-height: 1.6s4;
+  }
+}
+
+@media (min-width: 991px) {
+  .about-text {
+    font-size: 24px;
   }
 }
